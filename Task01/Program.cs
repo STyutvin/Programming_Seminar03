@@ -2,6 +2,7 @@
 {
     private static void Main(string[] args)
     {
+        //Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
         Console.Write("Введи пятизначное число: ");
         int num = Convert.ToInt32(Console.ReadLine());
         string numText = Convert.ToString(num);
