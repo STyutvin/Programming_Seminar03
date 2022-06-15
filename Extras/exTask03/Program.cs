@@ -1,31 +1,28 @@
-﻿
-//Задача 3. Дано трёх значное число N. Определить, есть ли среди его цифр 4 или 7.
-Console.Write("Введите трехзначное число: ");
-int numeric=Convert.ToInt32(Console.ReadLine());
-if (numeric>99 && numeric<1000)
-	{
-	int number1=numeric/100;
-	int number2=numeric/10%10;
-	int number3=numeric%10;
-	//if (number1==4 && number1!=7 || number2==4 && number2!=7 || number3==4 && number3!=7)
-	//	{
-	//	Console.WriteLine($"Во введенном числе {numeric} присутствует цифра 4.");
-	//	}
-	//else if (number1!=4 && number1==7 || number2!=4 && number2==7 || number3!=4 && number3==7)
-	//	{
-	//	Console.WriteLine($"Во введенном числе {numeric} присутствует цифра 7.");
-	//	}
-	if (number1==4 || number1==7 && number2==4 || number2==7 && number3==4 || number3==7)
-	{
-		Console.WriteLine($"Во введенном числе {numeric} присутствует цифра 4 или 7.");
-	}	
-	else
-	{
-		Console.WriteLine($"Во введенном числе {numeric} отсутствует цифра 4 или 7.");
-	}
+﻿internal class Program
+{
+    private static void Main(string[] args)
+    {
+        //Задача 3. Дано трёх значное число N. Определить, есть ли среди его цифр 4 или 7.
+        Console.Write("Введите трехзначное число: ");
+        int number = Convert.ToInt32(Console.ReadLine());
+        if (number > 99 && number < 1000)
+        {
+            int digit1 = number / 100;
+            int digit2 = number / 10 % 10;
+            int digit3 = number % 10;
+
+            if (digit1 == 4 || digit1 == 7 || digit2 == 4 || digit2 == 7 || digit3 == 4 || digit3 == 7)
+            {
+                Console.WriteLine("Введенное число содержит цифру 4 или 7");
+            }
+            else
+            {
+                Console.WriteLine("Введенное число не содержит цифру 4 или 7");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Число должно быть трехзначным. Запустите программу снова.");
+        }
     }
-    //}
-//else
-//	{
-//	Console.WriteLine("Число должно быть трехзначным.");
-//	}
+}
